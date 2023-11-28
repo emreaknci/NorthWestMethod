@@ -1,0 +1,27 @@
+.matrix-input {
+    text-align: center;
+    width: 3rem;
+    box-sizing: border-box;
+    background-color: #183D3D;
+    color: white;
+    border: none;
+}
+
+body {
+    background-color: #040D12;
+    color: white;
+}
+
+.btn {
+    background-color: #183D3D;
+    border-radius: 0.5rem;
+    color: white;
+}
+
+.btn:hover {
+    background-color: #5C8374;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+

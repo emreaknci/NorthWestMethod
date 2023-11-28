@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Generator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3 my-3">
+                <h1 class="text-center">Kuzeybatı Köşesi Yöntemi İle Ulaştırma Problemi Çözme</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 my-3">
+                <div class="form-floating">
+                    <input min="1" type="number" class="form-control" id="rowInput" value="3">
+                    <label for="rowInput">Satır Sayısını Giriniz</label>
+                </div>
+            </div>
+
+            <div class="col-md-6 my-3">
+                <div class="form-floating">
+                    <input min="1" type="number" class="form-control" id="colInput" value="3">
+                    <label for="colInput">Sütun Sayısını Giriniz</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 my-3">
+                <div id="btnContainer"></div>
+            </div>
+            <div class="col-md-6 my-3">
+                <div id="printContainer"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md my-3">
+                <div class="table-responsive" id="matrixContainer"></div>
+            </div>
+            <div class="col-md my-3">
+                <div id="outputContainer"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="script.js"></script>
+
+</body>
+
+</html>
