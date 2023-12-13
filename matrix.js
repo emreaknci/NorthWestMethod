@@ -17,7 +17,7 @@ class MatrixOperations {
         table.classList.add("table-responsive", "table");
         table.id = "maliyetMatrisi";
         const headerRow = document.createElement("tr");
-        this.addTableHeaderCell(headerRow, "Maliyet");
+        this.addTableHeaderCell(headerRow, "");
 
         for (let j = 1; j <= cols; j++) {
             this.addTableHeaderCell(headerRow, `C${j}`);
@@ -32,7 +32,7 @@ class MatrixOperations {
             this.addTableHeaderCell(tr, `R${i}`);
 
             for (let j = 1; j <= cols; j++) {
-                const input = this.createInput(this.costMatrix[i - 1][j - 1], "form-control matrix-input", `costMatrixInput_${i}_${j}`);
+                const input = this.createInput(this.costMatrix[i - 1][j - 1], "form-control matrix-input", `maliyetMatrisiInput_${i}_${j}`);
                 row.push(input);
                 const td = document.createElement("td");
                 td.appendChild(input);
@@ -70,15 +70,12 @@ class MatrixOperations {
         input.value = value;
         input.className = className;
         input.id = id;
-        // input.style.backgroundColor = "#183D3D";
-        input.style.backgroundColor = "#040D12";
+        input.style.backgroundColor = "#183D3D";
         input.style.color = "#fff";
         input.style.fontWeight = "bold";
-        // input.style.border = "none";
-        // input.style.borderBottom = "0.2rem solid #183D3D";
-        // input.style.borderTop = "0.2rem solid #183D3D";
-        input.style.borderRight = "0.2rem solid #183D3D";
-        input.style.borderLeft = "0.2rem solid #183D3D";
+        input.style.borderRight = "0.2rem solid #040D12";
+        input.style.borderLeft = "0.2rem solid #040D12";
+       
         return input;
     }
 
@@ -114,9 +111,9 @@ class MatrixOperations {
         for (let i = 1; i <= rows; i++) {
             const row = [];
             for (let j = 1; j <= cols; j++) {
-                const inputId = `costMatrixInput_${i}_${j}`;
+                const inputId = `maliyetMatrisiInput_${i}_${j}`;
                 const inputElement = document.getElementById(inputId);
-                const inputValue = inputElement ? parseFloat(inputElement.value) : 0;
+                const inputValue = inputElement ? parseFloat(inputElement.value) : Math.floor(Math.random() * 50) + 1;
                 row.push(inputValue);
             }
             this.costMatrix.push(row);
@@ -125,14 +122,14 @@ class MatrixOperations {
         for (let j = 1; j <= cols; j++) {
             const arzInputId = `arz_${j}`;
             const arzInputElement = document.getElementById(arzInputId);
-            const arzValue = arzInputElement ? parseFloat(arzInputElement.value) : 0;
+            const arzValue = arzInputElement ? parseFloat(arzInputElement.value) : Math.floor(Math.random() * 50) + 1;
             this.supplyMatrix.push(arzValue);
         }
 
         for (let i = 1; i <= rows; i++) {
             const talepInputId = `talep_${i}`;
             const talepInputElement = document.getElementById(talepInputId);
-            const talepValue = talepInputElement ? parseFloat(talepInputElement.value) : 0;
+            const talepValue = talepInputElement ? parseFloat(talepInputElement.value) : Math.floor(Math.random() * 50) + 1;
             this.demandMatrix.push(talepValue);
         }
 

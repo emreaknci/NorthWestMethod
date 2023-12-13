@@ -2,18 +2,18 @@
     text-align: center;
     width: 3rem;
     box-sizing: border-box;
-    background-color: #183D3D;
+    background-color: #040D12;
     color: white;
     border: none;
 }
 
 body {
-    background-color: #040D12;
+    background-color: #183D3D;
     color: white;
 }
 
 .btn {
-    background-color: #183D3D;
+    background-color: #040D12;
     border-radius: 0.5rem;
     color: white;
 }
@@ -23,5 +23,3 @@ body {
     cursor: pointer;
     transition: 0.5s;
 }
-
-

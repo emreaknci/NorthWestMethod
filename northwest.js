@@ -45,7 +45,7 @@ class NorthwestTransportationPlan {
     // Function to convert a matrix to a table
     matrixToTable(matrix) {
         const cellStyle = (value) => `style='padding: 0.8rem;${value !== 0 ? 'color:red' : 'color:white'}'`;
-        const tableStyle = `style='border-collapse: collapse; border-right: 0.3rem solid #183D3D; border-left: 0.3rem solid #183D3D; border-radius: 1rem'`;
+        const tableStyle = `style='border-collapse: collapse; border-right: 0.3rem solid #040D12; border-left: 0.3rem solid #040D12; border-radius: 1rem'`;
 
         const rows = matrix.map(row =>
             `<tr>${row.map(cell => `<td ${cellStyle(cell)}>${cell}</td>`).join('')}</tr>`
@@ -58,7 +58,7 @@ class NorthwestTransportationPlan {
         const rows = parseInt(document.getElementById("rowInput").value);
         const cols = parseInt(document.getElementById("colInput").value);
 
-        const getCellValue = (i, j) => parseFloat(document.getElementById(`costMatrixInput_${i}_${j}`).value);
+        const getCellValue = (i, j) => parseFloat(document.getElementById(`maliyetMatrisiInput_${i}_${j}`).value);
 
         const costMatrix = Array.from({ length: rows }, (_, i) => Array.from({ length: cols }, (_, j) => getCellValue(i + 1, j + 1)));
 
